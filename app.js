@@ -8,6 +8,8 @@ var __extends = (this && this.__extends) || (function () {
         return extendStatics(d, b);
     };
     return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
@@ -85,8 +87,8 @@ var ParticleDemo = /** @class */ (function (_super) {
                 this.connect({ keepMasterConnection: true });
             }
             else { // Name Server
-                this.connectToRegionMaster("EU");
-                //            this.connectToNameServer(); 
+                // this.connectToRegionMaster("US"); 
+                this.connectToNameServer({ region: 'US' });
             }
         }
         this.setupScene();

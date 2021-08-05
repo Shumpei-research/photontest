@@ -87,8 +87,8 @@ class ParticleDemo extends Photon.LoadBalancing.LoadBalancingClient {
                 this.connect({ keepMasterConnection: true });
             }
             else { // Name Server
-                this.connectToRegionMaster("EU"); 
-                //            this.connectToNameServer(); 
+                // this.connectToRegionMaster("US"); 
+                this.connectToNameServer({region:'US'}); 
             }
         }
 
