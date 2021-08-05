@@ -62,6 +62,7 @@ var ParticleDemo = /** @class */ (function (_super) {
         _this.gridColor = 'rgba(180,180,180,255)';
         _this.checkerColor = 'rgba(210,210,210,255)';
         _this.checker = new createjs.Container();
+        Output.log(String(ParticleDemoWss));
         var addr = _this.masterStart ? _this.getMasterServerAddress() : _this.getNameServerAddress();
         Output.log("Init", addr, ParticleDemoAppId, ParticleDemoAppVersion);
         _this.logger.info("Init", addr, ParticleDemoAppId, ParticleDemoAppVersion);

@@ -56,6 +56,7 @@ class ParticleDemo extends Photon.LoadBalancing.LoadBalancingClient {
     constructor(private canvas: HTMLCanvasElement) {
         super(ParticleDemoWss ? Photon.ConnectionProtocol.Wss : Photon.ConnectionProtocol.Ws, ParticleDemoAppId, ParticleDemoAppVersion);
 
+        Output.log(String(ParticleDemoWss))
         var addr = this.masterStart ? this.getMasterServerAddress() : this.getNameServerAddress();
 
         Output.log("Init", addr, ParticleDemoAppId, ParticleDemoAppVersion);
